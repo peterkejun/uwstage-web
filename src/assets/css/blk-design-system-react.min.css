@@ -18426,7 +18426,7 @@ hr.line-deafult {
 }
 .page-header {
   min-height: 100vh;
-  max-height: 999px;
+  /* max-height: 999px; */
   padding: 0;
   color: #fff;
   position: relative;

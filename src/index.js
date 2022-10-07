@@ -27,6 +27,8 @@ import Index from "views/Index.js";
 import LandingPage from "views/examples/LandingPage.js";
 import RegisterPage from "views/examples/RegisterPage.js";
 import ProfilePage from "views/examples/ProfilePage.js";
+import LoginPage from "views/examples/LoginPage";
+import SearchPage from "views/examples/SearchPage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -46,7 +48,15 @@ root.render(
         path="/profile-page"
         render={(props) => <ProfilePage {...props} />}
       />
-      <Redirect from="/" to="/components" />
+      <Route
+        path="/login-page"
+        render={(props) => <LoginPage {...props} />}
+      />
+      <Route
+        path="/search-page"
+        render={(props) => <SearchPage {...props} />}
+      />
+      <Redirect from="/" to="/landing-page" />
     </Switch>
   </BrowserRouter>
 );

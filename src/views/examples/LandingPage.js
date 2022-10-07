@@ -38,6 +38,8 @@ import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import Footer from "components/Footer/Footer.js";
 
 import bigChartData from "variables/charts.js";
+import textManager from "string/TextManager";
+import IndexNavbar from "components/Navbars/IndexNavbar";
 
 export default function LandingPage() {
   React.useEffect(() => {
@@ -49,7 +51,7 @@ export default function LandingPage() {
   }, []);
   return (
     <>
-      <ExamplesNavbar />
+      <IndexNavbar />
       <div className="wrapper">
         <div className="page-header">
           <img
@@ -86,13 +88,10 @@ export default function LandingPage() {
             <Row className="row-grid justify-content-between align-items-center text-left">
               <Col lg="6" md="6">
                 <h1 className="text-white">
-                  We keep your coin <br />
-                  <span className="text-white">secured</span>
+                  {textManager.getText('APP_NAME')}
                 </h1>
                 <p className="text-white mb-3">
-                  A wonderful serenity has taken possession of my entire soul,
-                  like these sweet mornings of spring which I enjoy with my
-                  whole heart. I am alone, and feel...
+                {textManager.getText('APP_DESCRIPTION')}
                 </p>
                 <div className="btn-wrapper mb-3">
                   <p className="category text-success d-inline">
